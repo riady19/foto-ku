@@ -30,18 +30,38 @@
       @livewire("list-foto")
       {{-- End List Artikel --}}
 
+
       {{-- Tranding Artikel -1 --}}
     <div class="col-span-12 lg:col-span-4 mt-1">
       @livewire("tranding-artikel")
-
       <hr class="mt-8"/>
 
     </div>
+</div>
+</div>
     {{-- End Tranding -1 --}}
 
+    {{-- Author --}}
 
-      </div>
-   </div>
+       <div class="col-span-12 lg:col-span-3">
+        <h1 class="text-center divider divider-warning">Author</h1>
+        <div class="p-6  ">
+            <div class="flex justify-center gap-10">
+                <div class="avatar">
+                <div class="w-24 rounded-full">
+                    <img src="{{ asset('gambar/avatar.png') }}" alt="avatar">
+                    {{-- <img src="https://img.daisyui.com/images/profile/demo/yellingwoman@192.webp" /> --}}
+                </div>
+                </div>
+                <div class="avatar">
+                    <div class="w-24 rounded-full">
+                        <img src="https://img.daisyui.com/images/profile/demo/yellingcat@192.webp" />
+                    </div>
+                    </div>
+
+            </div>
+        </div>
+        {{-- End Author --}}
 
    {{-- Gallery Team --}}
    <div class="pt-10 space-y-5">

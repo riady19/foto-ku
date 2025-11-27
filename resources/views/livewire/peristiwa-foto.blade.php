@@ -12,7 +12,7 @@
        src="{{ asset('storage/' .$item->image)}}" alt="{{ $item->title }}" class="w-150 h-80 rounded-xl" />
    </figure>
    <div class="card-body text-center">
-     <a href="" wire:navigate class="card-title text-2xl flex justify-center hover:opacity-50">{{ $item->tilte }}</a>
+     <a href="" wire:navigate class="card-title text-2xl flex justify-center hover:opacity-50">{{ $item->title }}</a>
      <p>{{ $item->content }}</p>
      <div class="card-actions justify-end">
      </div>

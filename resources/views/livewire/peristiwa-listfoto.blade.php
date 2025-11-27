@@ -1,13 +1,13 @@
 <div>
      <div>
-        <h1 class="text-2xl font-bold text-warning">Foto Lainnya</h1><hr>
+        <h1 class="text-2xl font-bold text-warning p-2 text-white">Foto Lainnya</h1><hr>
     </div>
 
    <div class="grid grid-cols-3 lg:grid-cols-3 gap-5">
    @foreach ( $artikel as $item )
     <div class="col-span-1 mt-5">
 {{-- Card Star --}}
-<div class="card bg-base-100 shadow-sm ">
+<div class="card bg-amber-600 shadow-sm">
   <figure>
     <a href="" wire:navigate>
     <img

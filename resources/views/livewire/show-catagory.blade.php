@@ -1,8 +1,8 @@
 <div>
-    <div class="container">
+    <div class="container space-y-5 px-4 mx-auto">
  <div class="grid grid-cols-12 gap-y-5 lg:gap-10">
      {{-- Trending Artikel --}}
-    <div class="col-span-12 lg:col-span-4">
+    <div class="col-span-12 lg:col-span-4 mt-1 px-4">
       @livewire("tranding-artikel")
       {{-- End Trending Artikel --}}
       </div>
@@ -10,7 +10,7 @@
     <div class="col-span-12 lg:col-span-8 px-10">
       @livewire("peristiwa-foto")
       {{-- End Potrait Foto --}}
-       <div class="col-span-3 lg:col-span-12">
+       <div class="col-span-3 lg:col-span-12 bg-amber-600 rounded-2xl px-2">
       @livewire("peristiwa-listfoto")
       {{-- End list peristiwa Foto --}}
         </div>

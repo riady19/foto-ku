@@ -8,8 +8,8 @@
         tabindex="-1"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><a class="text-lg font-medium hover:text-red-500 transition-all" href="/">Beranda</a></li>
-        <li><a href="/" wire:click class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Katagori</a></li>
-        <li><a href="/" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Kontak</a></li>
+        <li><a href="{{ route( 'show.catagory') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Catagory?</a></li>
+        <li><a href="{{ route('show.contact') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Caontact</a></li>
       </ul>
     </div>
 
@@ -19,9 +19,9 @@
     <ul class="menu menu-horizontal px-1 ">
       <li><a href="/" class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Beranda</a></li>
 
-      <li><a href="{{ route( 'show.catagory') }}" wire:click class="text-lg tracking-wider font-medium  hover:text-red-400 transition-all">Katagori</a></li>
+      <li><a href="{{ route( 'show.catagory') }}" wire:click class="text-lg tracking-wider font-medium  hover:text-red-400 transition-all">Catagory</a></li>
 
-      <li><a href="{{ route('show.contact') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Kontak</a></li>
+      <li><a href="{{ route('show.contact') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Contact</a></li>
     </ul>
   </div>
   <div class="navbar-end space-x-3">

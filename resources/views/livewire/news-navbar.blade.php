@@ -19,7 +19,7 @@
     <ul class="menu menu-horizontal px-1 ">
       <li><a href="/" class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Beranda</a></li>
 
-      <li><a  href="/" wire:click class="text-lg tracking-wider font-medium  hover:text-red-400 transition-all">Katagori</a></li>
+      <li><a href="{{ route( 'show.catagory') }}" wire:click class="text-lg tracking-wider font-medium  hover:text-red-400 transition-all">Katagori</a></li>
 
       <li><a href="{{ route('show.contact') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Kontak</a></li>
     </ul>

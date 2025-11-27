@@ -1,8 +1,8 @@
 <div class="">
    <div class="container space-y-5 p-3 mx-auto">
     <div class="grid grid-cols-2 min-h-[70vh]">
-    <div class="col-span-2 lg:col-span-1 py-8 lg:px-5 space-y-7">
-      <div class="flex flex-col justify-center items-center gap-y-2">
+    <div class="col-span-2 lg:col-span-1 py-2 lg:px-4 space-y-4 mt-8">
+      <div class="flex flex-col justify-center items-center gap-y-4">
         <div class="bg-slate-300 w-24 aspect-square rounded-full shadow-md">
         <img src="{{ asset('gambar/avatar.png') }}" alt="avatar" class="w-full h-full object-cover rounded-full">
       </div>
@@ -14,7 +14,7 @@
       </div>
     </div>
 
-    <div class="col-span-2 lg:col-span-1 p-0  p-4 text-bold rounded-2xl lg:p-5 p-2 text-bold rounded-2xl">
+    <div class="col-span-2 lg:col-span-1 p-0  p-2 text-bold rounded-2xl lg:p-2 p-2 text-bold rounded-2xl">
         <h1 class="text-2xl font-bold divider divider-warning mb-4">Foto Terbaru</h1>
 <div class="bg-red-500 p-8 rounded-2xl">
     @foreach ( $artikel as $item )

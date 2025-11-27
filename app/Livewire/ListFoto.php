@@ -22,6 +22,7 @@ class ListFoto extends Component
     }
     public function render()
     {
+        $this->artikel = Artikel::all();
         return view('livewire.list-foto')->layout('layouts.news');
     }
 }

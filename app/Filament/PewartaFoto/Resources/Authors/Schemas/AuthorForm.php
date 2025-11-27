@@ -13,6 +13,7 @@ class AuthorForm
         return $schema
             ->components([
                 TextInput::make('name')
+                    ->label('Nama Photographer')
                     ->required(),
                 TextInput::make('occupation')
                     ->default(null),

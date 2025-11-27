@@ -2,7 +2,7 @@
 <div class="container mx-auto p-4">
  <div class="grid grid-cols-12 gap-y-5 lg:gap-10 ">
      {{-- Trending Artikel --}}
-    <div class="col-span-12 lg:col-span-3 p-4">
+    <div class="col-span-12 lg:col-span-3">
       @livewire("tranding-artikel")
       {{-- End Trending Artikel --}}
       </div>
@@ -43,18 +43,22 @@
         </div>
         </div>
       </div>
-      <div class="col-span-12 lg:col-span-3">
+      <div class="col-span-12 lg:col-span-3 px-4">
         <h1 class="text-center divider divider-warning">Katagori</h1>
-        <div class="p-6">
+        <div class="p-2">
         <li><a href="">Street</a></li>
         <li><a href="">Potrait</a></li>
         <li><a href="">Lanscap</a></li>
         <li><a href="">Peristiwa</a></li>
         <li><a href="">Seni Budaya</a></li>
         </div>
-        <h1 class="text-center divider divider-warning">Iklan</h1>
+        <h1 class="text-center divider divider-warning ">Iklan</h1>
         <div class="bg-slate-300 w-full h-96">
-            <h1 class="text-center text-black divider divider-warning mx-auto">Iklan</h1>
+            <div>
+                <img src="{{ asset('gambar/gambardepan.jpg') }}" alt="" class="h-96">
+            </div>
+
+            {{-- <h1 class="text-center py-50 text-warning">iklan anda</h1> --}}
         </div>
         <h1 class="text-center divider divider-warning mt-4">Arsip</h1>
         <div class="p-6">

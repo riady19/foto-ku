@@ -4,6 +4,8 @@ namespace App\Filament\Resources\Artikels\Tables;
 
 use Filament\Tables\Table;
 use Filament\Actions\EditAction;
+use Filament\Actions\ViewAction;
+use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Illuminate\Foundation\Auth\User;
 use Filament\Actions\BulkActionGroup;
@@ -41,7 +43,6 @@ class ArtikelsTable
                         'no' => 'warning',
                         'yes' => 'success',
                     }),
-
               TextColumn::make('status')
                 ->badge()
                 ->color(fn (string $state): string => match ($state) {
@@ -62,8 +63,11 @@ class ArtikelsTable
                 //
             ])
             ->recordActions([
+                ActionGroup::make([
+                ViewAction::make(),
                 EditAction::make(),
                 DeleteAction::make(),
+                ]),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

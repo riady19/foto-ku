@@ -1,4 +1,4 @@
-<div class="navbar bg-base-100 shadow-sm px-36 mt-4">
+<div class="navbar bg-gray-200 shadow-sm px-36 mt-4 z-index">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -7,21 +7,21 @@
       <ul
         tabindex="-1"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a class="text-lg font-medium hover:text-secondary transition-all" href="/">Beranda</a></li>
-        <li><a href="/" wire:click class="text-lg tracking-wider font-medium hover:text-secondary transition-all">Katagori</a></li>
-        <li><a href="/" wire:navigate class="text-lg tracking-wider font-medium hover:text-secondary transition-all">Kontak</a></li>
+        <li><a class="text-lg font-medium hover:text-red-500 transition-all" href="/">Beranda</a></li>
+        <li><a href="/" wire:click class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Katagori</a></li>
+        <li><a href="/" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Kontak</a></li>
       </ul>
     </div>
 
-    <a href="/" class=" text-2xl"><span class="text-2xl">Foto</span><span class="text-secondary">-Ku</span></a>
+    <a href="/" class=" text-2xl"><span class="text-2xl"><span class="text-red-500 border border-red text-4xl px-2">L</span><span>umina</span></a>
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a href="/" class="text-lg tracking-wider font-medium hover:text-secondary transition-all">Beranda</a></li>
+    <ul class="menu menu-horizontal px-1 ">
+      <li><a href="/" class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Beranda</a></li>
 
-      <li><a  href="/" wire:click class="text-lg tracking-wider font-medium  hover:text-secondary transition-all">Katagori</a></li>
+      <li><a  href="/" wire:click class="text-lg tracking-wider font-medium  hover:text-red-400 transition-all">Katagori</a></li>
 
-      <li><a href="{{ route('show.contact') }}" wire:click class="text-lg tracking-wider font-medium hover:text-secondary transition-all">Kontak</a></li>
+      <li><a href="{{ route('show.contact') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Kontak</a></li>
     </ul>
   </div>
   <div class="navbar-end space-x-3">

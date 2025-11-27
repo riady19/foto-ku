@@ -31,10 +31,10 @@
 
 <footer class="bg-black text-white py-5">
 <p class="text-center">
-    @copyright {{ date('Y') }} - By. <span class="font-semibold">Foto-ku</span>
+    @copyright {{ date('Y') }} - www.<span class="font-semibold">Lumina.com</span>
 </p>
 <div class="text-center text-gray-400">
-    <small >Design|by.Foto-ku</small>
+    <small >Design| @by. <span class="text-red-500 border border-white text-xl px-2">L</span><span>umina</span></small>
 </div>
 </footer>
 

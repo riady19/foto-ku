@@ -16,4 +16,14 @@ class Author extends Model
         'slug',
     ];
     //
+    public function author()
+    {
+        return $this->belongsTo(Author::class, 'author_id');
+    }
+
+    public function catagory()
+    {
+        //  return $this->belongsTo(Catagory::class);
+        return $this->belongsTo(Catagory::class, 'catagory_id');
+    }
 }

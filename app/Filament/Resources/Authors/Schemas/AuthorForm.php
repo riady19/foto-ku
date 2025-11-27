@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources\Authors\Schemas;
 
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\TextInput;
+use Filament\Schemas\Components\Section;
+use Filament\Forms\Components\FileUpload;
+use Filament\Tables\Columns\Layout\Stack;
 
 class AuthorForm
 {
@@ -12,7 +14,9 @@ class AuthorForm
     {
         return $schema
             ->components([
+                //  Stack::make([
                 TextInput::make('name')
+                    ->label('Nama Photographer')
                     ->required(),
                 TextInput::make('occupation')
                     ->default(null),
@@ -26,6 +30,11 @@ class AuthorForm
                     ->required(),
                 TextInput::make('slug')
                     ->required(),
-            ]);
+            ])->columns(1);
+                //  ]);
+        //     ->contentGrid([
+        //     'md' => 2,
+        //     'xl' => 3,
+        // ]);
     }
 }

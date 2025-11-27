@@ -13,6 +13,7 @@ class CatagoryForm
         return $schema
             ->components([
                 TextInput::make('nama')
+                    ->label('Nama Catagory')
                     ->required(),
                 TextInput::make('slug')
                     ->required(),

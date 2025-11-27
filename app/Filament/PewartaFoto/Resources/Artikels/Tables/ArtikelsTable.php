@@ -5,6 +5,7 @@ namespace App\Filament\PewartaFoto\Resources\Artikels\Tables;
 use Filament\Tables\Table;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
+use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
@@ -51,9 +52,11 @@ class ArtikelsTable
                 //
             ])
             ->recordActions([
+                ActionGroup::make([
                 ViewAction::make(),
                 EditAction::make(),
                 DeleteAction::make(),
+                 ]),
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

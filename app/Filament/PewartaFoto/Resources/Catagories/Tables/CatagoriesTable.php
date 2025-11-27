@@ -17,6 +17,7 @@ class CatagoriesTable
         return $table
             ->columns([
                 TextColumn::make('nama')
+                    ->label('Nama Catagory')
                     ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),

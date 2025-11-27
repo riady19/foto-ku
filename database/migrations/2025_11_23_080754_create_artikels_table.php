@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('slug');
             $table->string('image')->nullable();
             $table->text('content', 500)->nullable();
-            $table->integer('catagory_id')->nullable();
+            $table->integer('catagory_id')->nullable()->constrained('catagories')->onDelete('set Null');
             $table->integer('author_id')->nullable();
             $table->enum('is_tranding', ['yes', 'no'])->default('no');
             $table->timestamps();

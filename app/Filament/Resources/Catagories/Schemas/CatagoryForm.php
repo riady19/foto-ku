@@ -13,18 +13,22 @@ class CatagoryForm
     {
         return $schema
             ->components([
+                // Card::make()->schema([
                 TextInput::make('nama')
+                    ->label('Nama Catagory')
                     ->required(),
-                TextInput::make('slug')
-                    ->required(),
-                FileUpload::make('icon')
+                 FileUpload::make('icon')
                     ->image()
                     ->imageEditor()
                     ->disk('public')
-    ->directory('image')
-    ->visibility('public')
-                    ->required()
-                    ->columnSpanFull(),
-            ]);
+                    ->directory('image')
+                    ->visibility('public')
+                    ->required(),
+                TextInput::make('slug')
+                    ->required(),
+                    // ->columnSpanFull(),
+            ])->columns(1);
+
+
     }
 }

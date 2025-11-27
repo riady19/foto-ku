@@ -11,11 +11,11 @@
        </div>
         <div class="lg:col-span-2 space-y-3 text-center lg:text-start">
             <div class="flex justify-center lg:justify-start">
-                <p class="bg-primary text-lg w-fit px-3 py-1 rounded-full capitalize text-white">{{ $item->catagory->nama }}</p>
+                <p class="bg-amber-700 text-lg w-fit px-3 py-1 rounded-full capitalize text-white">{{ $item->catagory->nama }}</p>
             </div>
             <a href="" wire:navigate><h1 class="text-2xl font-semibold tracking-wider hover:opacity-50">{{ Str::limit($item->title, 50) }}</h1>
                 </a>
-            <small class="text-warning">{{ $item->created_at }}</small>
+            <small class="text-red-400">{{ $item->created_at }}</small>
             <p class="text-justify">{{ $item->content }}</p>
 
         </div>

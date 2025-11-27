@@ -2,8 +2,10 @@
 
 namespace App\Filament\Resources\Users\Schemas;
 
-use Filament\Infolists\Components\TextEntry;
 use Filament\Schemas\Schema;
+use Filament\Support\Enums\TextSize;
+use Filament\Infolists\Components\TextEntry;
+use SebastianBergmann\CodeCoverage\Test\TestSize\Large;
 
 class UserInfolist
 {
@@ -11,18 +13,26 @@ class UserInfolist
     {
         return $schema
             ->components([
-                TextEntry::make('name'),
+                TextEntry::make('name')
+                    ->size(TextSize::Large)
+                    ->color('primary'),
                 TextEntry::make('email')
-                    ->label('Email address'),
+                    ->label('Email address')
+                    ->size(TextSize::Large)
+                    ->color('primary'),
                 TextEntry::make('email_verified_at')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('created_at')
+                    ->size(TextSize::Large)
+                    ->color('primary')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('updated_at')
+                    ->size(TextSize::Large)
+                    ->color('primary')
                     ->dateTime()
                     ->placeholder('-'),
-            ]);
+            ])->columns(1);
     }
 }

@@ -2,11 +2,14 @@
 
 namespace App\Filament\PewartaFoto\Resources\Artikels\Schemas;
 
+use App\Models\Author;
+use App\Models\Catagory;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
+use Filament\Forms\Components\MarkdownEditor;
 
 class ArtikelForm
 {
@@ -23,15 +26,16 @@ class ArtikelForm
                     ->disk('public')
                     ->directory('image')
                     ->visibility('public')
+                    ->columnSpanFull()
                      ->imageEditor(),
-                RichEditor::make('content')
-                 ->columnSpanFull()
+                 MarkdownEditor::make('content')
+                    ->columnSpanFull()
                     ->default(null),
-                TextInput::make('catagory_id')
-                    ->numeric()
+                Select::make('catagory_id')
+                     ->options(Catagory::query()->pluck('nama', 'id'))
                     ->default(null),
-                TextInput::make('author_id')
-                    ->numeric()
+                Select::make('author_id')
+                   ->options(Author::query()->pluck('name', 'id'))
                     ->default(null),
                 Select::make('is_tranding')
                     ->options(['yes' => 'Yes', 'no' => 'No'])

@@ -10,7 +10,7 @@
     <div class="col-span-12 lg:col-span-8 px-10">
       @livewire("peristiwa-foto")
       {{-- End Potrait Foto --}}
-       <div class="col-span-6 lg:col-span-12">
+       <div class="col-span-3 lg:col-span-12">
       @livewire("peristiwa-listfoto")
       {{-- End list peristiwa Foto --}}
         </div>

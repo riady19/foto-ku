@@ -20,8 +20,8 @@ class ArtikelsTable
             ->columns([
                 TextColumn::make('title')
                     ->searchable(),
-                TextColumn::make('slug')
-                    ->searchable(),
+               TextColumn::make('slug')
+                 ->searchable(),
                 ImageColumn::make('image')
                  ->disk('public'),
                 TextColumn::make('content')

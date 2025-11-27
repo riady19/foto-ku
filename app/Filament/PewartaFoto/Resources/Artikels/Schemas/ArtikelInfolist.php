@@ -15,6 +15,7 @@ class ArtikelInfolist
                 TextEntry::make('title'),
                 TextEntry::make('slug'),
                 ImageEntry::make('image')
+                 ->size(350)
                  ->disk('public')
                     ->placeholder('-'),
                 TextEntry::make('content')

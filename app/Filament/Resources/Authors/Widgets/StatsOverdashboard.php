@@ -18,12 +18,12 @@ class StatsOverdashboard extends StatsOverviewWidget
         $countAuthor = Author::count();
         return [
             Stat::make('Jumlah Artikel', $countArtikels . ' post')
-           ->description('Jumlah artikel yang telah diposting')
+           ->description('Jumlah Foto yang telah diposting')
             ->descriptionIcon('heroicon-m-arrow-trending-up')
             ->color('success'),
 
             Stat::make('Jumlah Catagory', $countKatagory . ' list')
-            ->description('Jumlah kategori yang tersedia')
+            ->description('Jumlah Catagory yang tersedia')
             ->descriptionIcon('heroicon-m-folder-open')
             ->color('danger'),
 
@@ -35,7 +35,6 @@ class StatsOverdashboard extends StatsOverviewWidget
         ];
     }
 
-
             protected function getHeading(): ?string
         {
             return 'Analytic Dashboard Admin FotoKu';
@@ -43,7 +42,9 @@ class StatsOverdashboard extends StatsOverviewWidget
 
         protected function getDescription(): ?string
         {
-            return 'Analystic Jumlah Data Artikel Published dan Catagory.';
+            return 'Analystic Jumlah Foto Published dan Catagory.';
+
         }
+
 
 }

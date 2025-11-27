@@ -7,12 +7,17 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
+use Filament\Support\Icons\Heroicon;
 use Illuminate\Foundation\Auth\User;
+use Illuminate\Notifications\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\TextColumn;
+use Illuminate\Support\Facades\Storage;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\SelectColumn;
+use League\Flysystem\Visibility;
+use Psy\VersionUpdater\Downloader;
 
 class ArtikelsTable
 {
@@ -22,10 +27,11 @@ class ArtikelsTable
             ->columns([
                 TextColumn::make('title')
                     ->searchable(),
-                //  TextColumn::make('slug')
-                //       ->searchable(),
+                 TextColumn::make('slug')
+                      ->searchable(),
                 ImageColumn::make('image')
-                  ->disk('public'),
+                  ->disk('public')
+                  ->Visibility('image'),
                 TextColumn::make('content')
                      ->limit(60)
                     ->searchable(),
@@ -67,6 +73,7 @@ class ArtikelsTable
                 ViewAction::make(),
                 EditAction::make(),
                 DeleteAction::make(),
+
                 ]),
             ])
             ->toolbarActions([
@@ -75,4 +82,11 @@ class ArtikelsTable
                 ]),
             ]);
     }
+    // public function delete() {
+    //     if($this->public){
+    //         Storage::delele($this->public);
+    //     }
+    //     parent::delete();
+    // }
+
 }

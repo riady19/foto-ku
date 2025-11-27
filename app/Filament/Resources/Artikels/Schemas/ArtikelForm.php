@@ -4,6 +4,7 @@ namespace App\Filament\Resources\Artikels\Schemas;
 
 use App\Models\Author;
 use App\Models\Catagory;
+use Illuminate\Support\Str;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
@@ -12,6 +13,8 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\MarkdownEditor;
+use Filament\Schemas\Components\Utilities\Set;
+use SebastianBergmann\CodeCoverage\Test\Target\Function_;
 
 class ArtikelForm
 {
@@ -20,6 +23,8 @@ class ArtikelForm
         return $schema
             ->components([
                 TextInput::make('title')
+                     ->live(onBlur: true)
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
                     ->required(),
                 TextInput::make('slug')
                     ->required(),

@@ -2,10 +2,12 @@
 
 namespace App\Filament\Resources\Catagories\Schemas;
 
+use Illuminate\Support\Str;
 use Filament\Schemas\Schema;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
+use Filament\Schemas\Components\Utilities\Set;
 
 class CatagoryForm
 {
@@ -16,6 +18,8 @@ class CatagoryForm
                 // Card::make()->schema([
                 TextInput::make('nama')
                     ->label('Nama Catagory')
+                      ->live(onBlur: true)
+                    ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
                     ->required(),
                  FileUpload::make('icon')
                     ->image()

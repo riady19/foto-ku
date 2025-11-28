@@ -5,6 +5,17 @@
     <div class="col-span-12 lg:col-span-4 mt-1 px-4">
       @livewire("tranding-artikel")
       {{-- End Trending Artikel --}}
+      {{-- Esay Foto --}}
+      <div class="col-span-12 lg:col-span-4 mt-1 px-4">
+          @livewire('esay-foto')
+          {{-- End Esay Foto --}}
+          {{-- List Author  --}}
+
+       <div class="col-span-12 lg:col-span-4 mt-1 px-4">
+     {{-- @livewire('show-authorlist') --}}
+       </div>
+          {{-- End ist Autho  --}}
+        </div>
       </div>
        {{-- Potrait Foto --}}
     <div class="col-span-12 lg:col-span-8 px-10">

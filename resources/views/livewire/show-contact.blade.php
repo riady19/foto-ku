@@ -5,6 +5,9 @@
     <div class="col-span-12 lg:col-span-3">
       @livewire("tranding-artikel")
       {{-- End Trending Artikel --}}
+      {{-- Esay Foto --}}
+        @livewire("esay-foto")
+      {{--End Esay Foto --}}
       </div>
       <div class="col-span-12 lg:col-span-6">
         <h1 class="text-center font-semibold text-2xl divider divider-warning">Informasi Kami</h1>
@@ -44,14 +47,7 @@
         </div>
       </div>
       <div class="col-span-12 lg:col-span-3 px-4">
-        <h1 class="text-center divider divider-warning">Katagori</h1>
-        <div class="p-2">
-        <li><a href="">Street</a></li>
-        <li><a href="">Potrait</a></li>
-        <li><a href="">Lanscap</a></li>
-        <li><a href="">Peristiwa</a></li>
-        <li><a href="">Seni Budaya</a></li>
-        </div>
+        @livewire('show-authorlist')
         <h1 class="text-center divider divider-warning ">Iklan</h1>
         <div class="bg-slate-300 w-full h-96">
             <div>

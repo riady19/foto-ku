@@ -38,8 +38,16 @@
     <div class="col-span-12 lg:col-span-4 mt-1 px-4">
       @livewire("tranding-artikel")
       <hr class="mt-8"/>
-
+            {{-- end Tranding Artikel -1 --}}
+            {{-- Peristiwa --}}
+    <div class="col-span-12 lg:col-span-4 mt-1 px-4">
+      @livewire("esay-foto")
     </div>
+     {{-- ENd Peristiwa --}}
+    <hr class="mt-8"/>
+    </div>
+
+
 </div>
 </div>
     {{-- End Tranding -1 --}}

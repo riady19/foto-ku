@@ -22,5 +22,7 @@
     </div>
     @endforeach
 </div>
+{{-- {{ $artikel->links() }} --}}
 </div>
 </div>
+

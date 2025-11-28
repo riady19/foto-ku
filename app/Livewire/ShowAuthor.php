@@ -27,6 +27,6 @@ class ShowAuthor extends Component
         // $authors = Author::class('name', 'ASC')->get();
         return view('livewire.show-author', [
             'authors' => Author::all()
-        ]);
+        ])->layout('layouts-news');
     }
 }

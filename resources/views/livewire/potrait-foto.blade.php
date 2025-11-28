@@ -1,5 +1,10 @@
 <div>
-    <h1 class="title divider divider-warning font-bold text-2xl p-4">Potrait Foto</h1>
+    <div>
+
+        <h1 class="text-2xl font-bold text-center divider divider-warning p-4">Potrait Foto</h1>
+    </div>
+    {{-- coursel --}}
+    <div>
     <div
   class="hero size-70 w-full rounded-2xl"
   style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);"

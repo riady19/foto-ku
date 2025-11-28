@@ -14,7 +14,7 @@
       src="{{ asset('storage/' .$item->image) }}" alt="{{ $item->title }}" class="size-30 rounded-box lg:size-40 rounded-box rounded-xl hover:opacity-50" /></a>
   </figure>
   <div class="m-2">
-     <a href="" wire:navigate class="text-xs text-white text-justify lg:text-lg text-center hover:opacity-50">{{ $item->title }}</a>
+     {{-- <a href="" wire:navigate class="text-xs text-white text-justify lg:text-lg text-center hover:opacity-50">{{ $item->title }}</a> --}}
   </div>
 </div>
 {{-- Card end  --}}

@@ -18,17 +18,16 @@
         </div>
       </div>
        {{-- Potrait Foto --}}
-    <div class="col-span-12 lg:col-span-8 px-10">
+     <div class="col-span-12 lg:col-span-8 px-10">
       @livewire("peristiwa-foto")
       {{-- End Potrait Foto --}}
-       <div class="col-span-3 lg:col-span-12 bg-amber-600 rounded-2xl px-2">
+    <div class="col-span-3 lg:col-span-12 bg-amber-600 rounded-2xl px-2">
       @livewire("peristiwa-listfoto")
       {{-- End list peristiwa Foto --}}
         </div>
-          {{-- Potrait Foto --}}
-           <div class="col-span-12 lg:col-span-4 mt-1 px-4">
-            @livewire('potrait-foto')
-           </div>
+    {{-- Potrait Foto --}}
+      @livewire('potrait-foto')
+    </div>
           {{-- End Potrait Foto --}}
 <div class="grid grid-cols-12 gap-y-5 lg:gap-10">
       {{-- list Artikel --}}

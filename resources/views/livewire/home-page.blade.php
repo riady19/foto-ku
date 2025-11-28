@@ -37,7 +37,7 @@
       {{-- Tranding Artikel -1 --}}
     <div class="col-span-12 lg:col-span-4 mt-1 px-4">
       @livewire("tranding-artikel")
-      <hr class="mt-8"/>
+      {{-- <hr class="mt-8"/> --}}
             {{-- end Tranding Artikel -1 --}}
             {{-- Peristiwa --}}
     <div class="col-span-12 lg:col-span-4 mt-1 px-4">

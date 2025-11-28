@@ -9,8 +9,8 @@
       <div class="col-span-12 lg:col-span-4 mt-1 px-4">
           @livewire('esay-foto')
           {{-- End Esay Foto --}}
-          {{-- List Author  --}}
 
+          {{-- List Author  --}}
        <div class="col-span-12 lg:col-span-4 mt-1 px-4">
      {{-- @livewire('show-authorlist') --}}
        </div>
@@ -25,6 +25,11 @@
       @livewire("peristiwa-listfoto")
       {{-- End list peristiwa Foto --}}
         </div>
+          {{-- Potrait Foto --}}
+           <div class="col-span-12 lg:col-span-4 mt-1 px-4">
+            @livewire('potrait-foto')
+           </div>
+          {{-- End Potrait Foto --}}
 <div class="grid grid-cols-12 gap-y-5 lg:gap-10">
       {{-- list Artikel --}}
     <div class="col-span-12 lg:col-span-4">

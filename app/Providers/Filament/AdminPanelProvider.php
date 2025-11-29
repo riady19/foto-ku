@@ -27,13 +27,17 @@ class AdminPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+         ->renderHook(
+            'panels::auth.login.form.after',
+            fn () => view('auth.socialite.google')
+        )
             ->default()
             ->id('admin')
             ->path('admin')
             ->login()
             ->registration()
             ->colors([
-                'primary' => Color::Amber,
+                'primary' => Color::Violet,
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\Filament\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\Filament\Pages')

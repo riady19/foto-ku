@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Artikel extends Model
@@ -21,6 +22,12 @@ class Artikel extends Model
         'status',
     ];
 
+    // public function handleSubmit(){
+    //     $file = $this->image;
+    //     $fileName = time().'.'.$file->getClientOriginalExtension();
+
+    //     Storage::disk('public')->putFileAs('image'. $file. $filename);
+    // }
 
     //
     public function author()

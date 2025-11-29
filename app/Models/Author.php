@@ -13,12 +13,18 @@ class Author extends Model
         'name',
         'occupation',
         'avatar',
+        'user_id',
         'slug',
     ];
     //
     public function author()
     {
         return $this->belongsTo(Author::class, 'author_id');
+    }
+
+      public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
     }
 
     public function catagory()

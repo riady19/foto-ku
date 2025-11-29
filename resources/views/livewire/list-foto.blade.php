@@ -1,6 +1,13 @@
 <div class="space-y-5">
     <div class="flex flex-col justify-center items-center lg:justify-start lg:items-start">
         <h1 class="title divider divider-warning font-bold text-2xl">List Foto</h1>
+        {{-- search --}}
+
+    <form wire:submit="search">
+        <input type="text" wire:model="query">
+        <button class="btn btn-primary" type="submit">Cari Foto</button>
+    </form>
+{{-- end search --}}
         <p class="text-gray-800"><small>Created: </small><span>By. TeamFotoku</span></p>
     </div>
 <div class="space-y-5">
@@ -22,7 +29,9 @@
     </div>
     @endforeach
 </div>
-{{-- {{ $artikel->links() }} --}}
+
+        {{-- {{ $artikels->links() }} --}}
+
 </div>
 </div>
 

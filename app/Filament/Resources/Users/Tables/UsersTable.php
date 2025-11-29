@@ -6,6 +6,7 @@ use Filament\Tables\Table;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Support\Enums\TextSize;
+use Filament\Support\Icons\Heroicon;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Support\Enums\FontWeight;
@@ -25,7 +26,8 @@ class UsersTable
                 ->color('warning')
                     ->searchable(),
                 TextColumn::make('email')
-                    ->label('Email address')
+                    ->icon(Heroicon::Envelope)
+                    ->iconColor('primary')
                     ->searchable(),
                 // TextColumn::make('email_verified_at')
                 //     ->dateTime()

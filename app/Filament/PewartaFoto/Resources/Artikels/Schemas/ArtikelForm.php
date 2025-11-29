@@ -30,6 +30,7 @@ class ArtikelForm
                      ->imageEditor()
                     ->disk('public')
                     ->directory('image')
+                    ->downloadable()
                     ->visibility('public')
                     ->columnSpanFull(),
 
@@ -37,9 +38,11 @@ class ArtikelForm
                     ->columnSpanFull()
                     ->default(null),
                 Select::make('catagory_id')
+                    ->label('Catagory')
                      ->options(Catagory::query()->pluck('nama', 'id'))
                     ->default(null),
                 Select::make('author_id')
+                ->label('Pewarta Foto')
                    ->options(Author::query()->pluck('name', 'id'))
                     ->default(null),
                 Select::make('is_tranding')

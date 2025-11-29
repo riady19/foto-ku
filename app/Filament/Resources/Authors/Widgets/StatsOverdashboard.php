@@ -37,7 +37,7 @@ class StatsOverdashboard extends StatsOverviewWidget
 
             protected function getHeading(): ?string
         {
-            return 'Analytic Dashboard Admin FotoKu';
+            return 'Analytic Dashboard Admin Lumina';
         }
 
         protected function getDescription(): ?string

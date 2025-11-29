@@ -8,11 +8,13 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Resources\Pages\ListRecords;
 use App\Filament\Resources\Artikels\ArtikelResource;
 use App\Filament\Resources\Artikels\Tables\ArtikelsTable;
+use App\Filament\Resources\Authors\Widgets\StatsOverdashboard;
 
 class ListArtikels extends ListRecords
 {
     protected static string $resource = ArtikelResource::class;
-    protected ?string $heading = 'Add New Foto';
+    protected ?string $heading = 'Post New Foto';
+
 
     protected function getHeaderActions(): array
     {
@@ -27,4 +29,5 @@ class ListArtikels extends ListRecords
                 // })
             ];
     }
+
 }

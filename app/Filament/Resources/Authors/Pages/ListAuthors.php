@@ -9,6 +9,7 @@ use Filament\Resources\Pages\ListRecords;
 class ListAuthors extends ListRecords
 {
     protected static string $resource = AuthorResource::class;
+    protected ?string $heading = 'Daftar Fotografer';
 
     protected function getHeaderActions(): array
     {

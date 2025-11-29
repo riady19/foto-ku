@@ -31,8 +31,8 @@ class AuthorsTable
                     ->size(80)
                     ->disk('public')
                     ->circular(),
-                 TextColumn::make('slug')
-                        ->searchable(),
+                //  TextColumn::make('slug')
+                //         ->searchable(),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()

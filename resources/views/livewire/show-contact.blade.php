@@ -12,7 +12,8 @@
       <div class="col-span-12 lg:col-span-6">
         <h1 class="text-center font-semibold text-2xl divider divider-warning">Informasi Kami</h1>
         <div class="text-2xl text-center p-6 mt-6 mx-4">
-            <h1>Foto-Ku Merupakan Website Fotografi yang didesign berdasarkan fotografi Jurnalistik yang dibuat secara mandiri untuk mendokumentasikan cerita di sudut negeri perbatasan Indonesia. Sebagai upaya dalam mengabadikan moment di Negeri Tercinta ini</h1>
+            <h1> <a href="/" class=" text-2xl"><span class="text-2xl"><span class="text-red-500 border border-red text-4xl px-2">L</span><span>umina</span></a>
+                 Merupakan Website Fotografi yang didesign berdasarkan fotografi Jurnalistik yang dibuat secara mandiri untuk mendokumentasikan cerita di sudut negeri perbatasan Indonesia. Sebagai upaya dalam mengabadikan moment di Negeri Tercinta ini</h1>
         </div>
         <div>
             <h1 class="text-3xl text-center text-warning">My Team</h1>

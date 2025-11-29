@@ -3,14 +3,18 @@
 namespace App\Filament\PewartaFoto\Resources\Artikels\Tables;
 
 use Filament\Tables\Table;
+use Filament\Actions\Action;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
+use Filament\Support\Icons\Heroicon;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Columns\ImageColumn;
+use Filament\Forms\Components\FileUpload;
+use Psy\VersionUpdater\Downloader;
 
 class ArtikelsTable
 {
@@ -23,6 +27,7 @@ class ArtikelsTable
                TextColumn::make('slug')
                  ->searchable(),
                 ImageColumn::make('image')
+                ->size(60)
                  ->disk('public'),
                 TextColumn::make('content')
                     ->limit(60)
@@ -56,6 +61,7 @@ class ArtikelsTable
                 ViewAction::make(),
                 EditAction::make(),
                 DeleteAction::make(),
+
                  ]),
             ])
             ->toolbarActions([

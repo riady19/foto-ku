@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Filament\Actions\ExportAction;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\ServiceProvider;
+use League\CommonMark\Environment\Environment;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -19,6 +22,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+         if (app()->environment('production')) {
+        URL::forceScheme('http');
     }
+        // URL::forceScheme('https');
+    }
+
+    // ExportAction::configureUsing(fn (ExportAction $action) => $action->fileDisk('image'));
 }

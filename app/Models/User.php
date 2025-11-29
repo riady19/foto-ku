@@ -3,11 +3,14 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Filament\Models\Contracts\FilamentUser;
+use Filament\Models\Contracts\HasAvatar;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
     use HasFactory, Notifiable;
@@ -46,5 +49,16 @@ class User extends Authenticatable
         ];
     }
 
+//     protected $fillable = [
+//     'google_id',
+//     'avatar',
+// ];
+
+
+//to use google avatar in our filament dashboard's user profile
+public function getFilamentAvatarUrl(): string
+{
+   return $this->avatar ? asset($this->avatar) : null;
+}
 
 }

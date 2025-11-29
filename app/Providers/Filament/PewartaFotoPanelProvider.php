@@ -26,11 +26,16 @@ class PewartaFotoPanelProvider extends PanelProvider
     public function panel(Panel $panel): Panel
     {
         return $panel
+        ->renderHook(
+            'panels::auth.login.form.after',
+            fn () => view('auth.socialite.google')
+        )
             ->id('pewartaFoto')
             ->login()
             ->registration()
+            ->passwordReset()
+            ->profile()
             ->path('pewartaFoto')
-
             ->colors([
                 'primary' => Color::Cyan,
             ])

@@ -28,16 +28,17 @@ class ArtikelForm
                     ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
                     ->required(),
                 TextInput::make('slug')
+                    ->readOnly()
                     ->required(),
                 FileUpload::make('image')
                      ->image()
                     ->imageEditor()
                      ->disk('public')
                      ->downloadable()
-                    ->getUploadedFileNameForStorageUsing(
-        fn (TemporaryUploadedFile $file): string => (string) str($file->getClientOriginalName())
-            ->prepend('Gambar')
-                    )
+        //             ->getUploadedFileNameForStorageUsing(
+        // fn (TemporaryUploadedFile $file): string => (string) str($file->getClientOriginalName())
+        //     ->prepend('Gambar')
+        //             )
                     ->visibility('public'),
                 MarkdownEditor::make('content')
                 ->label('content')
@@ -52,9 +53,8 @@ class ArtikelForm
                     ->label('Pewarta Foto')
                     ->options(Author::query()->pluck('name', 'id'))
                     ->default(null),
-    //            Toggle::make('is_tranding')
-    // ->onColor('success')
-    // ->offColor('danger')
+                // Toggle::make('is_tranding')
+                // ->default('true'),
                 Select::make('is_tranding')
                     ->options(['Yes' => 'yes', 'no' => 'no'])
                     ->default('no')

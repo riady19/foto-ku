@@ -22,6 +22,7 @@
       <li><a href="{{ route( 'show.catagory') }}" wire:click class="text-lg tracking-wider font-medium  hover:text-red-400 transition-all">Catagory</a></li>
 
       <li><a href="{{ route('show.contact') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Contact</a></li>
+      {{-- <li><a href="{{ route('show.artikel') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Artikel</a></li> --}}
     </ul>
   </div>
   <div class="navbar-end space-x-3">

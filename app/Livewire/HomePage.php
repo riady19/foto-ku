@@ -11,7 +11,7 @@ class HomePage extends Component
     public function mount()
     {
         // $this->artikels = Artikel::all();
-        $this->artikel = Artikel::with('catagory')->orderBy('created_at', 'desc')->limit(1)->get();
+        $this->artikel = Artikel::with('catagory')->whereIn('catagory_id', ['1', '2', '3', '4'])->orderBy('created_at', 'desc')->limit(1)->get();
 
     }
     public function render()

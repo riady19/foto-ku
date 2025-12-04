@@ -2,30 +2,33 @@
 
 namespace App\Filament\Resources\Artikels\Tables;
 
+use Dom\Text;
 use App\Models\Artikel;
 use Filament\Tables\Table;
+use Livewire\Attributes\Title;
 use Filament\Actions\BulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ViewAction;
 use League\Flysystem\Visibility;
 use Filament\Actions\ActionGroup;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\ExportAction;
 use Psy\VersionUpdater\Downloader;
 use Filament\Support\Icons\Heroicon;
 use Illuminate\Foundation\Auth\User;
 use Illuminate\Notifications\Action;
 use Filament\Actions\BulkActionGroup;
+use Filament\Forms\Components\Toggle;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\ExportAction;
+use Filament\Schemas\Components\Image;
 use Filament\Tables\Columns\TextColumn;
 use Illuminate\Support\Facades\Storage;
 use Filament\Tables\Columns\ImageColumn;
 use Filament\Tables\Columns\SelectColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Actions\Imports\Models\Import;
 use Psy\VersionUpdater\Downloader\FileDownloader;
 use Filament\Actions\Exports\Http\Controllers\DownloadExport;
-use Filament\Schemas\Components\Image;
-use Livewire\Attributes\Title;
 
 class ArtikelsTable
 {
@@ -55,12 +58,16 @@ class ArtikelsTable
                      ->listWithLineBreaks()
                     ->label('Author')
                     ->searchable(),
-                TextColumn::make('is_tranding')
-                    ->badge()
-                    ->color(fn (string $state): string => match ($state) {
-                        'no' => 'warning',
-                        'yes' => 'info',
-                    }),
+                    SelectColumn::make('is_tranding')
+                     ->options(['yes' => 'yes', 'no' => 'no'])
+                     ->default('no'),
+
+                // TextColumn::make('is_tranding')
+                //     ->badge()
+                //     ->color(fn (string $state): string => match ($state) {
+                //         'no' => 'warning',
+                //         'yes' => 'info',
+                //     }),
               TextColumn::make('status')
                 ->badge()
                 ->color(fn (string $state): string => match ($state) {

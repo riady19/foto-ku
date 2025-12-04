@@ -3,10 +3,10 @@
         <h1 class="title divider divider-warning font-bold text-2xl">List Foto</h1>
         {{-- search --}}
 
-    <form wire:submit="search">
+    {{-- <form wire:submit="search">
         <input type="text" wire:model="query">
         <button class="btn btn-primary" type="submit">Cari Foto</button>
-    </form>
+    </form> --}}
 {{-- end search --}}
         <p class="text-gray-800"><small>Created: </small><span>By. TeamFotoku</span></p>
     </div>
@@ -20,7 +20,7 @@
             <div class="flex justify-center lg:justify-start">
                 <p class="bg-amber-700 text-lg w-fit px-3 py-1 rounded-full capitalize text-white">{{ $item->catagory->nama }}</p>
             </div>
-            <a href="" wire:navigate><h1 class="text-2xl font-semibold tracking-wider hover:opacity-50">{{ Str::limit($item->title, 50) }}</h1>
+            <a href="/show/{{ $item->slug }}" wire:navigate><h1 class="text-2xl font-semibold tracking-wider hover:opacity-50">{{ Str::limit($item->title, 50) }}</h1>
                 </a>
             <small class="text-red-400">{{ $item->created_at }}</small>
             <p class="text-justify">{{ $item->content }}</p>

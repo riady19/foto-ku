@@ -17,7 +17,7 @@ class OnlyAdmin
     public function handle(Request $request, Closure $next): Response
     {
         if (auth()->user() && auth()->user()->id !== 1) {
-            abort(403, 'UnauthorizedPage');
+            abort(403, 'Maaf Anda Salah Masuk');
         }
         return $next($request);
     }

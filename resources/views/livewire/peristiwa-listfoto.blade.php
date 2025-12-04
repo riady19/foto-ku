@@ -9,7 +9,7 @@
 {{-- Card Star --}}
 <div class="card bg-amber-600 shadow-sm">
   <figure>
-    <a href="" wire:navigate>
+    <a href="/show/{{ $item->slug }}" wire:navigate>
     <img
       src="{{ asset('storage/' .$item->image) }}" alt="{{ $item->title }}" class="size-30 rounded-box lg:size-40 rounded-box rounded-xl hover:opacity-50" /></a>
   </figure>

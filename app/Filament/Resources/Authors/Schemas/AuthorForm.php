@@ -19,12 +19,9 @@ class AuthorForm
     {
         return $schema
             ->components([
-                //  Stack::make([
-                // Select::make('user_id')
-                //     ->label('User Name')
-                //     ->options(User::query()->pluck('email', 'id'))
-                //     ->default(null),
-                Select::make('name')
+               Section::make()
+               ->schema([
+                 Select::make('name')
                     ->options(User::query()->pluck('name', 'name'))
                 // TextInput::make('name')
                  ->live(onBlur: true)
@@ -43,12 +40,9 @@ class AuthorForm
                     ->required(),
                 TextInput::make('slug')
                     ->required(),
-            ])->columns(1);
+               ])
 
-                //  ]);
-        //     ->contentGrid([
-        //     'md' => 2,
-        //     'xl' => 3,
-        // ]);
+               ]);
+
     }
 }

@@ -7,6 +7,7 @@ use Filament\Schemas\Schema;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\FileUpload;
+use Filament\Schemas\Components\Section;
 use Filament\Schemas\Components\Utilities\Set;
 
 class CatagoryForm
@@ -16,7 +17,9 @@ class CatagoryForm
         return $schema
             ->components([
                 // Card::make()->schema([
-                TextInput::make('nama')
+                Section::make()
+                ->schema([
+                    TextInput::make('nama')
                     ->label('Nama Catagory')
                       ->live(onBlur: true)
                     ->afterStateUpdated(fn (Set $set, ?string $state) => $set('slug', Str::slug($state)))
@@ -31,7 +34,9 @@ class CatagoryForm
                 TextInput::make('slug')
                     ->required(),
                     // ->columnSpanFull(),
-            ])->columns(1);
+                ])
+
+                ]);
 
 
     }

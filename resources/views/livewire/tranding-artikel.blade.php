@@ -12,7 +12,7 @@
            <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->title }}" class="size-30 rounded-box object-cover rounded-xl hover:opacity-50 border border-white">
         </div>
         <div class="col-span-2 text-left lg:col-span-2 text-center lg:text-left text-white">
-            <a class="hover:opacity-50" href="" wire:navigate class="font-semibold text-lg">{{ $item->title }}</a>
+            <a href="/show/{{ $item->slug }}" class="hover:opacity-50" href="" wire:navigate class="font-semibold text-lg">{{ $item->title }}</a>
             <p class="text-warning">{{ $item->tanggal_publish }}</p>
         </div>
         </div>

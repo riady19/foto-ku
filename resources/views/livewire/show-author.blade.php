@@ -9,7 +9,7 @@
                         <div class="text-white mx-auto">
                             <h1>{{ $item->name }}</h1>
                      <div class="size-20 border border-b-black rounded-full">
-                    <img src="{{ asset('storage/' .$item->avatar) }}" alt="gambar" class="hover:opacity-2  hover:opacity-50 rounded-full">
+                    <img src="{{ asset('storage/' .$item->avatar) }}" alt="gambar" class="hover:opacity-2  hover:opacity-50 rounded-full p-4">
                 </div>
                 </div>
                 </div>

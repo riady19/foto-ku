@@ -7,6 +7,7 @@ use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\DateTimePicker;
+use Filament\Schemas\Components\Section;
 
 class UserForm
 {
@@ -14,7 +15,9 @@ class UserForm
     {
         return $schema
             ->components([
-                TextInput::make('name')
+               Section::make()
+               ->schema([
+                 TextInput::make('name')
                     ->required(),
                 TextInput::make('email')
                     ->label('Email address')
@@ -24,6 +27,7 @@ class UserForm
                 TextInput::make('password')
                     ->password()
                     ->required(),
+               ])
             ]);
     }
 }

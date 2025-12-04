@@ -8,22 +8,22 @@ use App\Models\Catagory;
 use Illuminate\Support\Str;
 use Illuminate\Support\Carbon;
 
-class PeristiwaListfoto extends Component
+class PeristiwaHome extends Component
 {
-    public $artikel, $catagory_id, $tranding;
+       public $artikel, $catagory_id, $tranding;
     public function mount()
     {
-         $this->artikel = Artikel::where('catagory_id', 3)->where('status', 'publish')->limit(4)->orderBy('created_at', 'desc')->offset(1)->get()->map(function($item){$item->tanggal_published = Carbon::parse($item->updated_at)->locale('id')->translatedFormat('l, d F Y');
+         $this->artikel = Artikel::where('catagory_id', '5')->where('catagory_id', 5)->where('status', 'publish')->limit(1)->orderBy('created_at', 'desc')->get()->map(function($item){$item->tanggal_published = Carbon::parse($item->updated_at)->locale('id')->translatedFormat('l, d F Y');
         // $this->artikel = Artikel::where('katagori_id', '3')->where('katagori_id', 3)->offset(1)->limit(3)->orderBy('created_at', 'desc')->get()->map(function($item){$item->tanggal_publish = Carbon::parse($item->updated_at)->locale('id')->translatedFormat('l, d F Y');
         // $this->artikel = Artikel::where('status', 'published')->first()->limit(2)->orderBy('created_at', 'desc')->get()->map(function($item){
             $item->tanggal_published = Carbon::parse($item->updated_at)->locale('id')->translatedFormat('l, d F Y ');
             $item->content = Str::limit($item->content, 200, '...');
-            $item-> catagory_id = Catagory::where( $item->Catagory, 'id');
+            $item->catagory_id = Catagory::where( $item->Catagory, 'id');
             return $item;
         });
     }
     public function render()
     {
-        return view('livewire.peristiwa-listfoto');
+        return view ('livewire.peristiwa-home');
     }
 }

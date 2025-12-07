@@ -1,5 +1,5 @@
 <div class="">
-   <div class="container space-y-5 px-12 mx-auto">
+   <div class="container space-y-5 mx-auto">
     <div class="grid grid-cols-2 min-h-[70vh]">
     <div class="col-span-2 lg:col-span-1 py-2 lg:px-4 space-y-4 mt-8">
       <div class="flex flex-col justify-center items-center gap-y-4">
@@ -19,7 +19,7 @@
 <div class="bg-red-500 rounded-2xl">
     @foreach ( $artikel as $item )
         <a href="/show/{{ $item->slug }}" wire:navigate>
-        <img src="{{ asset('storage/' .$item->image) }}" alt="{{ $item->title }}" class="w-full h-75  rounded-xl shadow-md hover:opacity-50 border border-amber-50" ></a>
+        <img src="{{ asset('storage/' .$item->image) }}" alt="{{ $item->title }}" class="w-ful h-full lg:h-80 w-full  rounded-xl shadow-md hover:opacity-50 border border-amber-50" ></a>
        <a href="" wire:navigate>
       <h1 class="text-center text-white font-bold mt-2 py-1 hover:opacity-50 ">{{ $item->title }}</h1></a>
         <p class="text-white text-center p-2 px-3">{{ $item->content }}</p>
@@ -56,7 +56,7 @@
       {{-- End List Artikel --}}
 
       {{-- Tranding Artikel -1 --}}
-    <div class="col-span-12 lg:col-span-4 mt-1 px-4">
+    <div class="col-span-12 lg:col-span-4 mb-4">
       @livewire("tranding-artikel")
       {{-- <hr class="mt-8"/> --}}
             {{-- end Tranding Artikel -1 --}}
@@ -92,18 +92,19 @@
     End Author --}}
 </div>
     {{-- End Tranding -1 --}}
-
+</div>
+</div>
         {{-- Author --}}
     <div class="col-span-12 lg:col-span-3">
      @livewire("show-author")
  </div>
     {{-- End Author --}}
 
-   {{-- Gallery Team --}}
-   <div class="pt-4 space-y-5">
+    {{-- Gallery Team --}}
+   <div class="pt-10 space-y-5">
     <div class="flex flex-col items-center justify-center">
-      <h1 class="title text-center divider divider-warning text-2xl font-bold">Team_Gallery</h1>
-      <small class="text-black">Team Fotoku Punya Cerita</small>
+      <h1 class="title text-center divider divider-warning">Team_Gallery</h1>
+      <small class="text-gray-300">Team Fotoku Punya Cerita</small>
     </div>
      @livewire('gallery-team')
      {{-- end Gallery Team --}}

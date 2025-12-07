@@ -1,4 +1,4 @@
-<div class="space-y-5 ml-5 ">
+<div class="space-y-2 ml-2 ">
    <div class="text-center lg:text-left">
     <h1 class="title divider divider-primary font-bold text-xl text-red-500 ">Foto Pilihan</h1>
 </div>
@@ -12,7 +12,7 @@
            <img src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->title }}" class="size-30 rounded-box object-cover rounded-xl hover:opacity-50 border border-white">
         </div>
         <div class="col-span-2 text-left lg:col-span-2 text-center lg:text-left text-white">
-            <a href="/show/{{ $item->slug }}" class="hover:opacity-50" href="" wire:navigate class="font-semibold text-lg">{{ $item->title }}</a>
+            <a href="/show/{{ $item->slug }}" class="hover:opacity-50" href="" wire:navigate class="font-semibold text-lg text-white">{{ $item->title }}</a>
             <p class="text-warning">{{ $item->tanggal_publish }}</p>
         </div>
         </div>

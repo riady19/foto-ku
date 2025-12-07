@@ -4,7 +4,7 @@
         <div class="hero mx-auto mt-8"
   style="background-image: url"
 >
-<img src="{{ asset('storage/' .$item->image)}}" alt="gambar" class="size-100% h-100">
+<img src="{{ asset('storage/' .$item->image)}}" alt="gambar" class="w-full h-full">
   <div class="hero-overlay"></div>
   <div class="hero-content text-neutral-content text-center">
     <div class="max-w-md">

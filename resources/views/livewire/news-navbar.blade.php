@@ -1,4 +1,4 @@
-<div class="navbar bg-gray-200 shadow-sm px-36 mt-4 z-index">
+<div class="navbar bg-gray-200 shadow-sm px-6 lg:px-36 mt-4 z-index">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -9,7 +9,7 @@
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
         <li><a class="text-lg font-medium hover:text-red-500 transition-all" href="/">Beranda</a></li>
         <li><a href="{{ route( 'show.catagory') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Catagory</a></li>
-        <li><a href="{{ route('show.contact') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Caontact</a></li>
+        <li><a href="{{ route('show.contact') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Contact</a></li>
       </ul>
     </div>
 
@@ -25,7 +25,7 @@
       {{-- <li><a href="{{ route('show.artikel') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Artikel</a></li> --}}
     </ul>
   </div>
-  <div class="navbar-end space-x-3">
+  <div class="navbar-end space-x-2 ml-15">
    <div class="border w-8 rounded-full aspect-square flex items-center justify-center hover:bg-gray-950 transition-all group">
     <i class="fa-brands fa-facebook group-hover:text-white"></i>
    </div>

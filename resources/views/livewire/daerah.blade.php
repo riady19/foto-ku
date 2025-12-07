@@ -1,5 +1,5 @@
 <div>
-    <h1 class="text-2xl font-bold text-center divider divider-warning p-4">Hiburan</h1>
+    <h1 class="text-2xl font-bold text-center divider divider-warning p-4">Black & White</h1>
     <div class="hero bg-base-200 ">
   <div class="hero-content flex-row-reverse">
     <img

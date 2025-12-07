@@ -1,5 +1,5 @@
 <div>
-<div class="container mx-auto p-4">
+<div class="container mx-auto">
  <div class="grid grid-cols-12 gap-y-5 lg:gap-10 ">
      {{-- Trending Artikel --}}
     <div class="col-span-12 lg:col-span-3">

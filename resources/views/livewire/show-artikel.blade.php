@@ -13,11 +13,18 @@
        <div>
         <div class="container">
          <h1 class="text-2xl font-bold px-10">{{ $artikel->title }}</h1>
+         <p class="px-10 text-red-500">{{ $artikel->catagory->nama }} | <i class="text-black">{{ $artikel->tanggal_published }}</i></p>
          <div class="rounded-2xl">
          <img src="{{ asset('storage/' .$artikel->image) }} " alt="{{ $artikel->title }}" class="h-full w-full lg:h--100 w-full px-10 py-4 rounded-2xl">
          </div>
          <h3 class="text-md px-10 text-red-500">Caption:</h3>
          <p class="px-10">{{ $artikel->content }}</p>
+
+         <div class="mt-4 px-3">
+            <p style="font-size: 13px"><b>Share this</b></p>
+            <a class="btn btn-primary rounded-full" href="https://facebook.com/sharer.php?u={{ url()->current() }}" target="_blank"><i class="fa-brands fa-facebook fa-1x"></i></a>
+            <a class="btn btn-success rounded-full" href="https://api.whatsapp.com/send?text={{ url()->current() }}" target="_blank"><i class="fa-brands fa-whatsapp fa-1x"></i></a>
+         </div>
          <div>
             @livewire( 'list-show-artikel')
             </div>

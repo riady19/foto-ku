@@ -30,6 +30,7 @@
       <div class="mt-2">
       @livewire('potrait-list-foto')
     </div>
+     @livewire( 'daerah')
     </div>
 
           {{-- End Potrait Foto --}}

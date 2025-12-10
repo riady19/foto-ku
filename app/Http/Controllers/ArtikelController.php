@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 class ArtikelController extends Controller
 {
-  public function show(string $id): View
+  public function ShowArtikel (string $id): View
     {
-        return view('home', [
+        return view('show.artikel', [
             'aritkels' => Artikel::findOrFail($id)
         ]);
     }

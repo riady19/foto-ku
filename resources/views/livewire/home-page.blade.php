@@ -3,8 +3,8 @@
     <div class="grid grid-cols-2 min-h-[70vh]">
     <div class="col-span-2 lg:col-span-1 py-2 lg:px-4 space-y-4 mt-8">
       <div class="flex flex-col justify-center items-center gap-y-4">
-        <div class="bg-slate-300 w-24 aspect-square rounded-full shadow-md">
-        <img src="{{ asset('gambar/avatarbaru.png') }}" alt="avatar" class="w-full h-full object-cover rounded-full">
+        <div class="bg-slate-300 w-24 aspect-square rounded-full shadow-md hover-3d">
+        <img src="{{ asset('gambar/avatarbaru.png') }}" alt="avatar" class="w-full h-full object-cover rounded-full hover-3d">
       </div>
       <h1 class="text-2xl font-jost"><span class="text-gray-500">by.<span class="text-2xl"><span class="text-red-500 border border-red text-4xl px-2">L</span><span>umina</span></h1>
       </div>

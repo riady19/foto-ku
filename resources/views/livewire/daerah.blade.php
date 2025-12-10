@@ -1,19 +1,23 @@
 <div>
     <h1 class="text-2xl font-bold text-center divider divider-warning p-4">Black & White</h1>
-    <div class="hero bg-base-200 ">
+
+          <div class="hero bg-base-200 ">
+             @foreach ( $artikel as $item )
   <div class="hero-content flex-row-reverse">
     <img
-      src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-      class="size-40 h-full rounded-lg shadow-2xl"
+      src="{{ asset('storage/' .$item->image)}}" alt="gambar"
+      class="size-40 h-full lg:w-50 h-60 rounded-lg shadow-2xl"
     />
     <div>
-      <h1 class="text-2xl font-bold">Box Office News!</h1>
+      <h1 class="text-2xl font-bold">{{ $item->title }}</h1>
       <p class="py-6">
-        Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitatione
+        {{ $item->content }}
       </p>
-      <button class="btn btn-primary">Get Started</button>
     </div>
   </div>
 </div>
+ @endforeach
         </div>
+
+
 </div>

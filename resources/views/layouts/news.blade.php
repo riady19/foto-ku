@@ -6,6 +6,28 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+         @if (Request::segment(1) == '')
+        <meta property="og:title" content="{{ config('app.name', 'Laravel') }}"/>
+        <meta name="description" content="Satu Foto, Sejuta Cerita"/>
+        <meta property="og:url" content="http:/foto-ku.test"/>
+        <meta property="og:description" content="Lumina Fotografi"/>
+        <meta property="og:image" content="{{ asset('gambar/avatarbaru.png') }}"/>
+        <meta property="og:type" content="article"/>
+        <title>{{ config('app.name', 'Laravel') }}</title>
+        @elseif (Request::segment(1) == 'show')
+        <meta property="og:title" content="{{ $artikel->title }}"/>
+        <meta name="description" content="{{ $artikel->title }}"/>
+        <meta property="og:url" content="http:/foto-ku.test/show/{{ $artikel->slug }}"/>
+        <meta property="og:description" content="{{ $artikel->title }}"/>
+        @if ($artikel->image)
+        <meta property="og:image" content="{{ asset('storage/' . $artikel->image) }}"/>
+        @else
+         <meta property="og:image" content="{{ asset('gambar/avatarbaru.png') }}"/>
+         @endif
+         <meta property="og:type" content="article"/>
+
+         <title>{{ config('app.name', 'Laravel') }} | {{ $artikel->title }}</title>
+         @endif
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">

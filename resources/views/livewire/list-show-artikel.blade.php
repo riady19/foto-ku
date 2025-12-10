@@ -1,7 +1,9 @@
 <div>
-   <div>
+   <div class="mt-6 px-3">
    {{-- carousel --}}
-<div class="carousel rounded-box w-full mt-10 lg:mt-10 border border-amber-950">
+  <p class="text-red-500">Foto Lainnya</p>
+<div class="carousel rounded-box w-full mt-4 lg:mt-2 border border-amber-950">
+
     @foreach ( $artikel as $item )
     <div class="carousel-item p-2">
          <a href="/show/{{ $item->slug }}" wire:navigate>

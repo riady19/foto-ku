@@ -23,6 +23,7 @@
 {{-- css Editor --}}
     {{-- <link rel="stylesheet" type="text/css" href="https://unpkg.com/trix@2.0.8/dist/trix.css"> --}}
 
+    @stack('meta')
     </head>
     <body class="font-sans antialiased">
         <x-banner />

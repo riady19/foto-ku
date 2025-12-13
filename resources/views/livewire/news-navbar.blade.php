@@ -1,4 +1,4 @@
-<div class="navbar bg-gray-200 shadow-sm px-6 lg:px-36 mt-4 z-index">
+<div class="navbar bg-gray-200/80 backdrop-blur-md shadow-sm px-6 lg:px-36 fixed top-0 w-full z-50">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -10,6 +10,8 @@
         <li><a class="text-lg font-medium hover:text-red-500 transition-all" href="/">Beranda</a></li>
         <li><a href="{{ route( 'show.catagory') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Catagory</a></li>
         <li><a href="{{ route('show.contact') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Contact</a></li>
+        <li><a href="{{ route('show.fitur') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Chat Lumina</a></li>
+        <li><a href="{{ route('photo.pintar') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Photo Pintar</a></li>
       </ul>
     </div>
 
@@ -22,6 +24,9 @@
       <li><a href="{{ route( 'show.catagory') }}" wire:click class="text-lg tracking-wider font-medium  hover:text-red-400 transition-all">Catagory</a></li>
 
       <li><a href="{{ route('show.contact') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Contact</a></li>
+       <!-- <li><a href="{{ route('show.fitur') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Chat Lumina</a></li> -->
+       <li><a href="{{ route('photo.pintar') }}" wire:navigate class="text-lg tracking-wider font-medium hover:text-red-500 transition-all">Photo Pintar</a></li>
+      </ul>
       {{-- <li><a href="{{ route('show.artikel') }}" wire:click class="text-lg tracking-wider font-medium hover:text-red-400 transition-all">Artikel</a></li> --}}
     </ul>
   </div>

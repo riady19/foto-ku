@@ -21,6 +21,9 @@
  {{-- <x-nav-link href="{{ route('katagori') }}" :active="request()->routeIs('katagori')">
                         {{ __('Katagori') }}
                     </x-nav-link> --}}
+    <x-nav-link href="{{ route('photo.pintar') }}" :active="request()->routeIs('photo.pintar')">
+                        {{ __('Photo Pintar') }}
+                    </x-nav-link>
                 </div>
                  {{-- <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
                         {{ __('Create') }}

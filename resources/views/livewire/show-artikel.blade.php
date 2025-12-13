@@ -1,4 +1,11 @@
 <div>
+    @push('meta')
+        <meta property="og:title" content="{{ $artikel->title }}" />
+        <meta property="og:description" content="{{ Str::limit(strip_tags($artikel->content), 150) }}" />
+        <meta property="og:image" content="{{ $artikel->image ? asset('storage/' . $artikel->image) : asset('assets/img/logo/logo.png') }}" />
+        <meta property="og:url" content="{{ url()->current() }}" />
+        <meta property="og:type" content="article" />
+    @endpush
 
             <div class=>
                <div class="container space-y-5 mx-auto">
@@ -19,11 +26,11 @@
          </div>
          <h3 class="text-md px-10 text-red-500">Caption:</h3>
          <p class="px-10">{{ $artikel->content }}</p>
-
-         <div class="mt-4 px-3">
+<!-- Share This -->
+          <div class="mt-4 px-3">
             <p style="font-size: 13px"><b>Share this</b></p>
-            <a class="btn btn-primary rounded-full" href="https://facebook.com/sharer.php?u={{ url()->current() }}" target="_blank"><i class="fa-brands fa-facebook fa-1x"></i></a>
-            <a class="btn btn-success rounded-full" href="https://api.whatsapp.com/send?text={{ url()->current() }}" target="_blank"><i class="fa-brands fa-whatsapp fa-1x"></i></a>
+            <a class="btn btn-primary rounded-full" href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank"><i class="fa-brands fa-facebook fa-1x"></i></a>
+            <a class="btn btn-success rounded-full" href="https://api.whatsapp.com/send?text={{ urlencode($artikel->title . ' ' . url()->current()) }}" target="_blank"><i class="fa-brands fa-whatsapp fa-1x"></i></a>
          </div>
          <div>
             @livewire( 'list-show-artikel')

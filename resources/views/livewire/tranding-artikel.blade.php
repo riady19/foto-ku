@@ -3,7 +3,17 @@
     <h1 class="title divider divider-primary font-bold text-xl text-red-500 ">Foto Pilihan</h1>
 </div>
 <div class="space-y-5 bg-primary rounded-2xl p-4">
-    @foreach ( $artikel as $item )
+     @foreach ( $artikel as $item )
+    {{-- <ul class="list bg-base-100 rounded-box shadow-md bg-primary">
+  <li class="list-row">
+    <div><img class="size-20 rounded-box" src="{{ asset('storage/' . $item->image) }}" alt="{{ $item->title }}" /></div>
+    <div>
+       <a href="/show/{{ $item->slug }}" class="hover:opacity-50"  wire:navigate> <h3 class="text-xl font-semibold tracking-wider hover:opacity-50 text-white">{{ $item->title }}</h3></a>
+      <div class="text-xs uppercase font-semibold opacity-60"><p class="text-warning">{{ $item->tanggal_publish }}</p></div>
+    </div>
+  </li>
+</ul> --}}
+
     <div class="grid grid-cols-3 gap-5">
         <div class="col-span-1 lg:col-span-1 w-full h-full lg:h-28 rounded-xl relative">
            <div class="w-8 h-8 rounded-full bg-red-500 flex justify-center items-center absolute -top-4 -left-4">

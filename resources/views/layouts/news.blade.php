@@ -6,28 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
-         @if (Request::segment(1) == '')
-        <meta property="og:title" content="{{ config('app.name', 'Laravel') }}"/>
-        <meta name="description" content="Satu Foto, Sejuta Cerita"/>
-        <meta property="og:url" content="http:/foto-ku.test"/>
-        <meta property="og:description" content="Lumina Fotografi"/>
-        <meta property="og:image" content="{{ asset('gambar/avatarbaru.png') }}"/>
-        <meta property="og:type" content="article"/>
-        <title>{{ config('app.name', 'Laravel') }}</title>
-        @elseif (Request::segment(1) == 'show')
-        <meta property="og:title" content="{{ $artikel->title }}"/>
-        <meta name="description" content="{{ $artikel->title }}"/>
-        <meta property="og:url" content="http:/foto-ku.test/show/{{ $artikel->slug }}"/>
-        <meta property="og:description" content="{{ $artikel->title }}"/>
-        @if ($artikel->image)
-        <meta property="og:image" content="{{ asset('storage/' . $artikel->image) }}"/>
-        @else
-         <meta property="og:image" content="{{ asset('gambar/avatarbaru.png') }}"/>
-         @endif
-         <meta property="og:type" content="article"/>
-
-         <title>{{ config('app.name', 'Laravel') }} | {{ $artikel->title }}</title>
-         @endif
+        @stack('meta')
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -37,17 +16,22 @@
         {{-- google font --}}
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        {{-- flux Link --}}
+        <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=inter:400,500,600&display=swap" rel="stylesheet" />
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
         <!-- Styles -->
         @livewireStyles
+         @fluxAppearance
     </head>
     <body class="font-jost">
 @livewire('news-navbar')
 
-<main class="py-10">
+<main class="pt-24 pb-10">
     {{ $slot }}
 </main>
 
@@ -62,5 +46,7 @@
 
    @stack('modals')
         @livewireScripts
+         @fluxScripts
+         <livewire:chat-bot />
     </body>
 </html>
